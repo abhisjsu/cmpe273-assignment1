@@ -42,7 +42,7 @@ def msgJson(filename):
 	return "%s"%file.decoded_content
 
 @app.route("/<filename>-config.yml")
-def profile(filename):
+def msgYml(filename):
 	file_path = filename+"-config.yml"
 	file = repo.get_file_contents(file_path)
 
