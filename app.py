@@ -17,8 +17,8 @@ from flask import Flask
 app = Flask(__name__)
 
 # getting the github credentials authenticated by passing them as an argument to the Github constructor
-g = Github('abhisjsu','Abhi@1234');
-user = g.get_user()
+g = Github();
+user = g.get_user('abhisjsu')
 
 #Getting the URL to the github repo which is explicitly passed as a command line argument by the user
 gitUrl = sys.argv[1];
