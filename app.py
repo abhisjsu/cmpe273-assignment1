@@ -35,13 +35,13 @@ repo = user.get_repo(gitUrl[-1])
 def hello():
     return "Hello World!"
 
-@app.route("/<filename>-config.json")
+@app.route("/v1/<filename>-config.json")
 def msgJson(filename):
 	file_path = filename+"-config.json"
 	file = repo.get_file_contents(file_path)
 	return "%s"%file.decoded_content
 
-@app.route("/<filename>-config.yml")
+@app.route("/v1/<filename>-config.yml")
 def msgYml(filename):
 	file_path = filename+"-config.yml"
 	file = repo.get_file_contents(file_path)
